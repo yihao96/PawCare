@@ -1,0 +1,77 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Raleway-Black.ttf",
+      "sha1": "5e61b5d2fadda72712c8ef1a1bed8d1b5e5c364a"
+    },
+    {
+      "path": "assets/fonts/Raleway-BlackItalic.ttf",
+      "sha1": "3bc98bde35e917c0f85e5facb291cfab723de88a"
+    },
+    {
+      "path": "assets/fonts/Raleway-Bold.ttf",
+      "sha1": "c828019f33d43d0701f14626ab5c48b7cff0d431"
+    },
+    {
+      "path": "assets/fonts/Raleway-BoldItalic.ttf",
+      "sha1": "19cecbb8022b70e475bf284cad07d6b91f7d3899"
+    },
+    {
+      "path": "assets/fonts/Raleway-ExtraBold.ttf",
+      "sha1": "496c63179478a4c946c217d49dd76260ce027c0c"
+    },
+    {
+      "path": "assets/fonts/Raleway-ExtraBoldItalic.ttf",
+      "sha1": "29d753df34078f6abe9730f05144c529b54c7756"
+    },
+    {
+      "path": "assets/fonts/Raleway-ExtraLight.ttf",
+      "sha1": "9c2d3481d74141c40303f60f7144e2bfc620b658"
+    },
+    {
+      "path": "assets/fonts/Raleway-ExtraLightItalic.ttf",
+      "sha1": "e76aba9fa04900212f6c016d955c19cc77903b3e"
+    },
+    {
+      "path": "assets/fonts/Raleway-Italic.ttf",
+      "sha1": "65d56e349aefecd1aee1e3e54dacd2ac192f0a9a"
+    },
+    {
+      "path": "assets/fonts/Raleway-Light.ttf",
+      "sha1": "048bcf35fbe082f4bd03c4565ee70c4d97b2f20a"
+    },
+    {
+      "path": "assets/fonts/Raleway-LightItalic.ttf",
+      "sha1": "ecc065212e4239655b1dd64c5efd58e9ece126d4"
+    },
+    {
+      "path": "assets/fonts/Raleway-Medium.ttf",
+      "sha1": "678d7e14cc39c7fab7f9a8f9d3a44b85cf8228f5"
+    },
+    {
+      "path": "assets/fonts/Raleway-MediumItalic.ttf",
+      "sha1": "97d6785b469429e9dccac47ed8c596097150e929"
+    },
+    {
+      "path": "assets/fonts/Raleway-Regular.ttf",
+      "sha1": "7f3a56349d12c56bafbefcfd199e62464ca6e238"
+    },
+    {
+      "path": "assets/fonts/Raleway-SemiBold.ttf",
+      "sha1": "e0a18c1a510fb444bb22bf961a6e50e845359ebe"
+    },
+    {
+      "path": "assets/fonts/Raleway-SemiBoldItalic.ttf",
+      "sha1": "af1330f0778ac1d2e7bf665b1d971f6095d14554"
+    },
+    {
+      "path": "assets/fonts/Raleway-Thin.ttf",
+      "sha1": "dc0ae243021e6393cf3861a63f8b1039d0865b1d"
+    },
+    {
+      "path": "assets/fonts/Raleway-ThinItalic.ttf",
+      "sha1": "513adff23278529d7a7324145713d8a04c54f695"
+    }
+  ]
+}

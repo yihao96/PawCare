@@ -1,0 +1,13 @@
+const COLORS = {
+  LIGHT_ORANGE: '#FBB44D',
+  ORANGE: '#F58804',
+  CHOCOLATE: '#462701',
+  WHITE: '#FFFFFF',
+  GRAY98: '#FAFAFA',
+  WHITESMOKE: '#F5F5F5',
+  GRAY88: '#E0E0E0',
+  GRAY62: '#9E9E9E',
+  NERO: '#252525',
+};
+
+export default COLORS;
