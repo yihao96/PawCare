@@ -22,8 +22,16 @@ export const WelcomeScreen = () => {
         </View>
       </View>
       <View style={styles.btnsContainer}>
-        <Buttons.LongButton text={'Log in'} fontColor={COLORS.ORANGE} />
-        <Buttons.LongButton text={'Sign up'} fontColor={COLORS.CHOCOLATE} />
+        <Buttons.LongButton
+          text={'Log in'}
+          fontColor={COLORS.ORANGE}
+          onPress={() => console.log('Log in')}
+        />
+        <Buttons.LongButton
+          text={'Sign up'}
+          fontColor={COLORS.CHOCOLATE}
+          onPress={() => console.log('Sign up')}
+        />
       </View>
     </ImageBackground>
   );

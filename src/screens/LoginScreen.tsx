@@ -1,7 +1,14 @@
 import React from 'react';
-import {ImageBackground, StyleSheet, Text, View} from 'react-native';
-import {Buttons} from '../components';
-import {COLORS, FONTS, IMAGES} from '../utils';
+import {
+  ImageBackground,
+  KeyboardAvoidingView,
+  Platform,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
+import {Buttons, Inputs} from '../components';
+import {COLORS, FONTS, ICONS, IMAGES} from '../utils';
 
 export const LoginScreen = () => {
   return (
@@ -15,13 +22,49 @@ export const LoginScreen = () => {
           </Text>
         </View>
       </View>
-      <View style={styles.loginContainer}>
+      <KeyboardAvoidingView
+        style={styles.loginContainer}
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
         <View style={styles.loginSubContainer}>
           <Text style={styles.textLoginTitle}>Login</Text>
+          <View style={styles.inputsContainer}>
+            <Inputs.TextInputWithIcon
+              icon={<ICONS.Email />}
+              autoComplete="email"
+              clearButtonMode="never"
+              inputMode="email"
+              placeholder="Email"
+              secureTextEntry={false}
+            />
+            <Inputs.TextInputWithIcon
+              icon={<ICONS.Padlock />}
+              autoComplete="password"
+              clearButtonMode="while-editing"
+              inputMode="none"
+              placeholder={'Password'}
+              secureTextEntry={true}
+            />
+          </View>
+          <Buttons.MediumButton
+            text={'Login'}
+            fontColor={COLORS.ORANGE}
+            onPress={() => console.log('Login')}
+          />
+          <Text style={styles.textBody}>Or login with</Text>
+          <View>
+            <Buttons.ThirdPartyLoginBtn
+              icon={<ICONS.Google />}
+              onPress={() => {}}
+            />
+          </View>
+          <Text style={styles.textBody}>
+            New to PawCare?{' '}
+            <Text style={styles.textBodyHighlight} onPress={() => {}}>
+              Register
+            </Text>
+          </Text>
         </View>
-        {/* <Buttons.LongButton text={'Log in'} fontColor={COLORS.ORANGE} />
-        <Buttons.LongButton text={'Sign up'} fontColor={COLORS.CHOCOLATE} /> */}
-      </View>
+      </KeyboardAvoidingView>
     </ImageBackground>
   );
 };
@@ -56,6 +99,7 @@ const styles = StyleSheet.create({
     height: 393,
     alignItems: 'center',
     justifyContent: 'center',
+    rowGap: 25,
     paddingHorizontal: 19,
     borderRadius: 10,
     backgroundColor: COLORS.WHITESMOKE,
@@ -63,6 +107,9 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
     shadowOpacity: 0.25,
     elevation: 8,
+  },
+  inputsContainer: {
+    rowGap: 12,
   },
   textTitle: {
     fontFamily: FONTS.Raleway_Bold,
@@ -77,9 +124,13 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: COLORS.ORANGE,
   },
-  textDescription: {
+  textBody: {
     fontFamily: FONTS.Raleway_Medium,
     fontSize: 16,
     color: COLORS.NERO,
+  },
+  textBodyHighlight: {
+    fontFamily: FONTS.Raleway_Bold,
+    color: COLORS.ORANGE,
   },
 });

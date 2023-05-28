@@ -5,9 +5,15 @@ import {COLORS, FONTS} from '../utils';
 type ButtonProps = {
   text: String;
   fontColor: ColorValue;
+  onPress(): void;
 };
 
-export const LongButton = ({text, fontColor}: ButtonProps): JSX.Element => {
+type ThirdPartyLoginBtnProps = {
+  icon: JSX.Element;
+  onPress(): void;
+};
+
+export const LongButton = (props: ButtonProps): JSX.Element => {
   const styles = StyleSheet.create({
     container: {
       width: 294,
@@ -15,7 +21,7 @@ export const LongButton = ({text, fontColor}: ButtonProps): JSX.Element => {
       justifyContent: 'center',
       alignItems: 'center',
       borderRadius: 25,
-      backgroundColor: fontColor,
+      backgroundColor: props.fontColor,
     },
     text: {
       fontFamily: FONTS.Raleway_Bold,
@@ -25,13 +31,13 @@ export const LongButton = ({text, fontColor}: ButtonProps): JSX.Element => {
   });
 
   return (
-    <TouchableOpacity style={styles.container}>
-      <Text style={styles.text}>{text}</Text>
+    <TouchableOpacity style={styles.container} onPress={props.onPress}>
+      <Text style={styles.text}>{props.text}</Text>
     </TouchableOpacity>
   );
 };
 
-export const MediumButton = ({text, fontColor}: ButtonProps): JSX.Element => {
+export const MediumButton = (props: ButtonProps): JSX.Element => {
   const styles = StyleSheet.create({
     container: {
       width: 174,
@@ -39,7 +45,7 @@ export const MediumButton = ({text, fontColor}: ButtonProps): JSX.Element => {
       justifyContent: 'center',
       alignItems: 'center',
       borderRadius: 25,
-      backgroundColor: fontColor,
+      backgroundColor: props.fontColor,
     },
     text: {
       fontFamily: FONTS.Raleway_Bold,
@@ -49,8 +55,25 @@ export const MediumButton = ({text, fontColor}: ButtonProps): JSX.Element => {
   });
 
   return (
-    <TouchableOpacity>
-      <Text style={styles.text}>{text}</Text>
+    <TouchableOpacity style={styles.container} onPress={props.onPress}>
+      <Text style={styles.text}>{props.text}</Text>
+    </TouchableOpacity>
+  );
+};
+
+export const ThirdPartyLoginBtn = (
+  props: ThirdPartyLoginBtnProps,
+): JSX.Element => {
+  const styles = StyleSheet.create({
+    container: {
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+  });
+
+  return (
+    <TouchableOpacity style={styles.container} onPress={props.onPress}>
+      {props.icon}
     </TouchableOpacity>
   );
 };
